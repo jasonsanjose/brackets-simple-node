@@ -62,6 +62,9 @@ define(function (require, exports, module) {
         
         // Helper function to connect to node
         function connect() {
+            $(nodeConnection).on("base.log", function (event) {
+                console.log(event);
+            });
             var connectionPromise = nodeConnection.connect(true);
             connectionPromise.fail(function () {
                 console.error("[brackets-simple-node] failed to connect to node");
