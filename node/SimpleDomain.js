@@ -37,6 +37,7 @@ maxerr: 50, node: true */
      *   memory on the user's system, in bytes.
      */
     function cmdGetMemory() {
+        console.log("hello from SimpleDomain");
         return {total: os.totalmem(), free: os.freemem()};
     }
     
